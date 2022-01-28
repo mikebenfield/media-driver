@@ -3222,7 +3222,7 @@ MOS_STATUS CodechalDecodeVc1::SetFrameStates()
     bool pictureIsI = m_mfxInterface->IsVc1IPicture(currPic, m_vc1PicParams->picture_fields.is_first_field, picType) ? true : false;
     bool pictureIsP = m_mfxInterface->IsVc1PPicture(currPic, m_vc1PicParams->picture_fields.is_first_field, picType) ? true : false;
     bool pictureIsB =
-        (m_mfxInterface->IsVc1BPicture(currPic, m_vc1PicParams->picture_fields.is_first_field, picType) |
+        (m_mfxInterface->IsVc1BPicture(currPic, m_vc1PicParams->picture_fields.is_first_field, picType) ||
             m_mfxInterface->IsVc1BIPicture(currPic, m_vc1PicParams->picture_fields.is_first_field, picType))
             ? true
             : false;
